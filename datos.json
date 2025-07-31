@@ -1,0 +1,104 @@
+{
+        "nombre_comercial": "Raíz & Forma",
+        "portada": [
+            {
+                "nombre_producto": "Hogar de Estilo",
+                "nombre_categoria": "Decoracion",
+                "imagen": "./portada-producto-1.jpg"
+            },
+            {
+                "nombre_producto": "Silla Helen",
+                "nombre_categoria": "Decoracion",
+                "imagen": "./portada-producto-2.jpg"
+            },
+            {
+                "nombre_producto": "Jarron para Flores",
+                "nombre_categoria": "Decoracion",
+                "imagen": "./portada-producto-3.jpg"
+            },
+            {
+                "nombre_producto": "Huevos de Madera",
+                "nombre_categoria": "Decoracion",
+                "imagen": "./portada-producto-4.jpg"
+            },
+            {
+                "nombre_producto": "Mesa de Madera de Pino",
+                "nombre_categoria": "Mueble",
+                "imagen": "./portada-producto-5.jpg"
+            }
+        ],
+        "acerca_de": {
+            "nombre_tienda": "Tienda Raíz & Forma",
+            "descripcion": "Diseñamos y seleccionamos muebles con alma: funcionales, duraderos y con carácter propio. Nuestra pasión por los materiales nobles, como la madera maciza, se refleja en cada pieza que ofrecemos."
+        },
+        "productos": [
+            {
+				"nombre": "Lorem Sofá Max",
+				"precio_anterior": "499.99",
+				"precio": "429.99",
+				"imagen": "./producto-1.jpg",
+				"categoria": "Sofás"
+			},
+			{
+				"nombre": "Ipsum Mesa Central",
+				"precio_anterior": "299.99",
+				"precio": "249.99",
+				"imagen": "./producto-2.jpg",
+				"categoria": "Mesas"
+			},
+			{
+				"nombre": "Dolor Silla Pro",
+				"precio_anterior": "89.99",
+				"precio": "74.99",
+				"imagen": "./producto-3.jpg",
+				"categoria": "Sillas"
+			},
+			{
+				"nombre": "SitSofá Lounge",
+				"precio_anterior": "599.99",
+				"precio": "519.99",
+				"imagen": "./producto-4.jpg",
+				"categoria": "Sofás"
+			},
+			{
+				"nombre": "Amet Mesa Extensible",
+				"precio_anterior": "399.99",
+				"precio": "349.99",
+				"imagen": "./producto-5.jpg",
+				"categoria": "Mesas"
+			},
+			{
+				"nombre": "Elit Silla Nordic",
+				"precio_anterior": "119.99",
+				"precio": "99.99",
+				"imagen": "./producto-6.jpg",
+				"categoria": "Sillas"
+			},
+			{
+				"nombre": "Adipiscing Sofá Retro",
+				"precio_anterior": "459.99",
+				"precio": "399.99",
+				"imagen": "./producto-7.jpg",
+				"categoria": "Sofás"
+			},
+			{
+				"nombre": "Tempor Mesa Minimal",
+				"precio_anterior": "199.99",
+				"precio": "159.99",
+				"imagen": "./producto-8.jpg",
+				"categoria": "Mesas"
+			}
+        ],
+        "derechos_reservados": "Todos los derechos reservados Raíz & Forma 2025.",
+		"botones_formulario": [
+			{
+				"titulo": "Quejas, dudas o sugerencias",
+				"url": ""
+			},
+			{
+				"titulo": "¿Tuvo algún inconveniente con su pedido?",
+				"url": ""
+			}
+		],
+		"descargar_catalogo_url": ""
+    }

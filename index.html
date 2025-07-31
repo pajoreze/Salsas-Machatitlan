@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Raíz & Forma - Calidad en Muebles</title>
+    <meta name="title" content="Woodex - Get Quality Furniture">
+    <meta name="description" content="This is an eCommerce html template made by codewithsadee">
+
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mr+De+Haviland&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+</head>
+
+<body id="top">
+    <div id="app">
+        <header class="header" data-header>
+            <div class="container">
+                <a href="#" class="logo">{{ datos.nombre_comercial }}</a>
+            </div>
+        </header>
+
+        <main>
+            <article>
+                <section class="section hero" id="home" aria-label="home">
+                    <div class="container">
+                        <ul class="hero-list">
+                            <li>
+                                <div class="hero-card">
+                                    <figure class="card-banner img-holder" style="--width: 285; --height: 396;">
+                                        <img :src="datos.portada[0]?.imagen" width="285" height="396" alt="" class="img-cover">
+                                    </figure>
+                                    <div class="card-content">
+                                        <h3>
+                                            <a href="#" class="card-title">{{ datos.portada[0]?.nombre_producto }}</a>
+                                        </h3>
+                                        <p class="card-text">{{ datos.portada[0]?.nombre_categoria }}</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="colspan-2">
+                                <div class="hero-card">
+                                    <figure class="card-banner img-holder" style="--width: 568; --height: 389;">
+                                        <img :src="datos.portada[1]?.imagen" width="568" height="389" alt="" class="img-cover">
+                                    </figure>
+
+                                    <div class="card-content">
+                                        <h3>
+                                            <a href="#" class="card-title">{{ datos.portada[1]?.nombre_producto }}</a>
+                                        </h3>
+                                        <p class="card-text">{{ datos.portada[1]?.nombre_categoria }}</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="hero-card">
+                                    <figure class="card-banner img-holder" style="--width: 285; --height: 396;">
+                                        <img :src="datos.portada[2]?.imagen" width="285" height="396" alt="" class="img-cover">
+                                    </figure>
+                                    <div class="card-content">
+                                        <h3>
+                                            <a href="#" class="card-title">{{ datos.portada[2]?.nombre_producto }}</a>
+                                        </h3>
+                                        <p class="card-text">{{ datos.portada[2]?.nombre_categoria }}</p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="colspan-2">
+                                <div class="hero-card">
+                                    <figure class="card-banner img-holder" style="--width: 580; --height: 213;">
+                                        <img :src="datos.portada[3]?.imagen" width="580" height="213" alt="" class="img-cover">
+                                    </figure>
+                                    <div class="card-content">
+                                        <h3>
+                                            <a href="#" class="card-title">{{ datos.portada[3]?.nombre_producto }}</a>
+                                        </h3>
+                                        <p class="card-text">{{ datos.portada[3]?.nombre_categoria }}</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="colspan-2">
+                                <div class="hero-card">
+                                    <figure class="card-banner img-holder" style="--width: 580; --height: 213;">
+                                        <img :src="datos.portada[4]?.imagen" width="580" height="213" alt="" class="img-cover">
+                                    </figure>
+                                    <div class="card-content">
+                                        <h3>
+                                            <a href="#" class="card-title">{{ datos.portada[4]?.nombre_producto }}</a>
+                                        </h3>
+                                        <p class="card-text">{{ datos.portada[4]?.nombre_categoria }}</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="section product">
+                    <div class="container">
+                        <div class="title-wrapper">
+                            <div class="section-title">
+                                <h2 class="h2">Productos</h2>
+                                <a target="_blank" :href="datos.descargar_catalogo_url">Descargar catálogo</a>
+                            </div>
+                            <ul class="filter-btn-list">
+                                <li v-for="(categoria, index) in categorias" :key="index" class="filter-btn-item">
+                                    <button 
+                                        class="filter-btn"
+                                        @click="categoriaSeleccionada = categoria"
+                                        :class="{ active: categoriaSeleccionada === categoria }"
+                                    >
+                                        {{ categoria }}
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <ul class="grid-list product-list" data-filter="all">
+                            <li v-for="(producto, index) in productosFiltrados" :key="producto.nombre">
+                                <div class="product-card">
+                                    <a
+                                        href="#"
+                                        class="card-banner img-holder has-before"
+                                        style="--width: 300; --height: 300;"
+                                    >
+                                        <img
+                                            :src="producto.imagen"
+                                            :alt="producto.nombre"
+                                            class="img-cover"
+                                            width="300"
+                                            height="300"
+                                        />
+                                    </a>
+                                    <div class="card-content">
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">{{ producto?.nombre }}</a>
+                                        </h3>
+                                        <div class="card-price">
+                                            <del class="del" v-if="producto.precio_anterior">
+                                                ${{ producto.precio_anterior }}
+                                            </del>
+                                            <data class="price" value="10">${{ producto.precio }}</data>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="section about" id="about" aria-label="about">
+                    <div class="container">
+                        <h2 class="section-title">{{ datos?.acerca_de?.nombre_tienda }}</h2>
+                        <p class="section-text">
+                            {{ datos?.acerca_de?.descripcion }}
+                        </p>
+                        <div class="button-container">
+                            <a target="_blank" :href="datos.botones_formulario[0]?.url" class="btn-primary">{{ datos.botones_formulario[0]?.titulo }}</a>
+                            <a target="_blank" :href="datos.botones_formulario[1]?.url" class="btn-primary">{{ datos.botones_formulario[1]?.titulo }}</a>
+                        </div>
+                    </div>
+                </section>
+
+            </article>
+        </main>  
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-bottom">
+                    <p class="copyright">
+                        {{ datos.derechos_reservados }}
+                    </p>
+                </div>
+            </div>
+        </footer>  
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+    const { createApp } = Vue;
+
+    createApp({
+        data() {
+            return {
+                categoriaSeleccionada: "Todas",
+                datos: {
+                    portada: [],
+                    productos: [],
+                    botones_formulario: []
+                }
+            };
+        },
+        computed: {
+            categorias() {
+                const todas = this.datos.productos.map(p => p.categoria);
+                const unicas = Array.from(new Set(todas));
+                return ['Todas', ...unicas];
+            },
+            productosFiltrados() {
+                if (this.categoriaSeleccionada == 'Todas') {
+                    return this.datos.productos;
+                }
+                
+                return this.datos.productos.filter(
+                    p => p.categoria === this.categoriaSeleccionada
+                );
+            }
+        },
+      
+        mounted() {
+            fetch('./datos.json')
+            .then(response => response.json())
+            .then(data => {
+                this.datos = data;
+            })
+            .catch(error => {
+                console.error('Error cargando el JSON:', error);
+            });
+        
+        }
+    }).mount('#app');
+    </script>
+
+</body>
+
+</html>
