@@ -72,7 +72,7 @@
 		"botones_formulario": [
 			{
 				"titulo": "Quejas, dudas o sugerencias",
-				"url": ""
+				"url": "https://docs.google.com/forms/d/e/1FAIpQLSfZuVURM19YSmfuPH7nsEUqcLYrnDoZnUwPQYqGGVunw5OJ1A/viewform?usp=dialog"
 			},
 			{
 				"titulo": "¿Tuvo algún inconveniente con su pedido?",
@@ -81,5 +81,6 @@
 		],
 		"descargar_catalogo_url": ""
     }
+
 
 
